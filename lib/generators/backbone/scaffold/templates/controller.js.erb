@@ -1,0 +1,14 @@
+// A `Backbone.Controller` for managing `<%= name %>` related routes.
+// The controller is extended with RESTful routes so we only need to
+// add any routes not introduced by `App.Controllers.Restful`, if any.
+App.Controllers.<%= namespace %> = Backbone.Controller.extend({
+
+});
+
+// Extend with support for RESTful routes
+_.extend(App.Controllers.<%= namespace %>, App.Controllers.Restful);
+
+// We instantiate it immediately so it will be active when the App starts
+new App.Controllers.<%= namespace %>({
+  modelClass: '<%= name %>'
+});
