@@ -1,0 +1,19 @@
+{{! Example template, replace contents }}
+<h2>{{title}}</h2>
+<section class="activities">
+  <h4>#{{id}}: {{title}}</h4>
+  <ul>
+    {{#each activities}}
+      <li>
+        <aside>
+          <img src="/images/avatar-missing.png"/>
+          {{createdAt}} {{createdByAlias}}
+        </aside>
+        <section>
+          {{comment}}
+        </section>
+      </li>
+    {{/each}}
+  </ul>
+  <div style="clear: left"/>
+</section>
